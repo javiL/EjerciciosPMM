@@ -4,7 +4,6 @@ package com.example.examenjavierlopez;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,7 +16,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +23,7 @@ import android.widget.Toast;
 public class PantallaPrincipal extends Activity {
 
 	private Button BotonCalculo;
+	@SuppressWarnings("unused")
 	private RadioButton radioTarifaNormal;
 	private RadioButton radioTarifaUrgente;
 	private CheckBox checkBoxRegalo;
@@ -148,26 +147,29 @@ public class PantallaPrincipal extends Activity {
 						if (checkBoxRegalo.isChecked() && checkBoxTarjeta.isChecked()){
 								opciones = "Con caja regalo y dedicatoria";
 						}else{
-							opciones = "";
+							opciones = "Ninguna";
 						}
 					}
 				}
+				
 				//Comprobamos los radiobutton para ver si es urgente o tarifa normal
 				if (radioTarifaUrgente.isChecked()){
 					tarifa = tarifa + (tarifa * 0.3);
-					UrgenteNormal = "urgente";
+					UrgenteNormal = "Urgente";
 				}else{
-					UrgenteNormal = "normal";
+					UrgenteNormal = "Normal";
 					
 				}
 				//Asignamos a una variable la CADENA para pasarla a otra pantalla
-				cadenaResultado = ("Zona:" +zona + " -" +continente+ "-" + "\nTarifa: " + UrgenteNormal + "\nPeso: " + peso +
-					" Kg" + "\nOpciones: " + opciones + "\nCoste Final: " +tarifa + " â‚¬"	);
+				cadenaResultado = ("Zona: " +zona + " -" +continente+ "-" + "\nTarifa: " 
+						+ UrgenteNormal + "\nPeso: " + peso +
+					" Kg" + "\nOpciones: " + opciones + "\nCoste Final: " +tarifa + " €"	);
 					
-				
+				//Añadimos el bundle para pasar los datos a otra pantalla
 				Bundle bund = new Bundle();
 				
 				bund.putString("Tarifa", cadenaResultado);
+				bund.putDouble("PrecioFinal", tarifa);
 				Intent pantalla = new Intent(PantallaPrincipal.this,PantallaResult.class);
 				pantalla.putExtras(bund);
 				
@@ -196,7 +198,7 @@ public class PantallaPrincipal extends Activity {
 			startActivity(intentCanvas);
 			break;
 		case R.id.MenuOpcAcercaDe:
-			Toast.makeText(this, "Desarrollado por Javier Lopez de 2ÂºDAM", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "Desarrollado por Javier Lopez de 2ºDAM", Toast.LENGTH_SHORT).show();
 		}
 		return super.onOptionsItemSelected(item);	
 }

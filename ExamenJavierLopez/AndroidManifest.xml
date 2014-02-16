@@ -26,6 +26,10 @@
             android:name="com.example.examenjavierlopez.Dibujito"
             android:label="@string/Casita" >
         </activity>
+        <activity 
+            android:name="com.example.examenjavierlopez.PantallaResult"
+            android:label="@string/Resultado">
+            </activity>
         
     </application>
 

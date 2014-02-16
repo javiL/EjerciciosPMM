@@ -32,10 +32,11 @@ public final class R {
         public static final int LblContinente=0x7f08000a;
         public static final int LblPrecio=0x7f08000b;
         public static final int LblZona=0x7f080009;
-        public static final int MenuOpcAcercaDe=0x7f08000e;
-        public static final int MenuOpcDibujo=0x7f08000d;
+        public static final int MenuOpcAcercaDe=0x7f08000f;
+        public static final int MenuOpcDibujo=0x7f08000e;
         public static final int TituloApp=0x7f080000;
         public static final int TxtTarifa=0x7f08000c;
+        public static final int TxtValor=0x7f08000d;
         public static final int gruporb=0x7f080005;
         public static final int radio1=0x7f080006;
         public static final int radio2=0x7f080007;
@@ -51,6 +52,7 @@ public final class R {
     public static final class string {
         public static final int BotoNombre=0x7f050006;
         public static final int Casita=0x7f050007;
+        public static final int Resultado=0x7f050008;
         public static final int app_name=0x7f050000;
         public static final int lblCajaRegalo=0x7f050004;
         public static final int lblTarifaNormal=0x7f050002;
