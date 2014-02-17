@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Spinners bases de datos</string>
+    <string name="action_settings">Settings</string>
+    <string name="Bienvenido">Bienvenido al ERP de Android</string>
+    <string name="IrCentros">Ir a Centros</string>
+    <string name="IrPersonal">Ir a Personal</string>
+    <string name="IrProfesores">Ir a Profesores</string>
+    <string name="TxtCentros">Centros -></string>
+    <string name="TxtPersonal">Ir a personal -></string>
+    <string name="TxtProfesores">Ir a Profesores -></string>
+    <string name="pant_centros">Consultar centros</string>
+    <string name="pant_personal">Consultar personal</string>
+    <string name="pant_profesores">Consultar profesores</string>
+    <string name="cons_centros">"Consultas de centros "</string>
+    <string name="cons_personal">Consultas de personal</string>
+	<string name="cons_profesores">Consultas de profesores</string>
+</resources>
